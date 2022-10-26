@@ -29,7 +29,10 @@ steps:
     timeoutInSeconds: 600
     name: "Install Node Prereqs"
     command: |
+      cd ${OCI_WORKSPACE_DIR}
+      ls
       cd ${OCI_WORKSPACE_DIR}/node_express
+      ls
       # install nvm
       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
       export NVM_DIR="$HOME/.nvm"
@@ -65,12 +68,14 @@ steps:
     name: "Run Tests"
     command: |
       cd ${OCI_WORKSPACE_DIR}/node_express
+      ls
       npm test
 
   - type: Command
     timeoutInSeconds: 1200
     name: "Helm Build"
     command: |
+      pwd  
       cd ${OCI_WORKSPACE_DIR}/node_express/helm/node-service
       export BUILDRUN_HASH=${BUILDRUN_HASH}
       originalChartfile="Chart.yaml"
