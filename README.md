@@ -1,5 +1,7 @@
 # Getting Started Helm-based Deployments with OCI DevOps
 
+USED IN LAB 18-1
+
 This is an example project using Node.js with the Express [getting started generator](https://expressjs.com/en/starter/generator.html). With the [OCI DevOps service](https://www.oracle.com/devops/devops-service/) and this project, you'll be able to build, test and deploy this application to Oracle Container Engine for Kubernetes (OKE) via Helm Charts.
 
 In this example, you'll build a container image of this Node Express Getting Started App, and deploy your built container to the OCI Container Registry, then deploy the getting started app to Oracle Container Engine for Kubernetes (OKE) all using the OCI DevOps service!
